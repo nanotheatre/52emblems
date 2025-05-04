@@ -4,21 +4,21 @@
 
 		$(document).ready(function(){
 
-            fetch('json/TextesCartes.json')
+            fetch('SymbolicCalendar.json')
                 .then(response => response.json())
                 .then(data => {
                     TextesCartes - data;
                 })
                 .catch(error => console.error('Erreur de chargement JSON:', error));
 
-            fetch('cartes.svg')
+            fetch('Cards.svg')
                 .then(response => response.text())
                 .then(svgText => {
                   document.getElementById('embleme').innerHTML = svgText;
                 })
                 .catch(error => console.error('Erreur de chargement SVG:', error));
 
-                fetch('le-calendrier-symbolique.svg')
+                fetch('SymbolicCalendar.svg')
                     .then(response => response.text())
                     .then(svgText => {
                       document.getElementById('couverture-illustration').innerHTML = svgText;
