@@ -23,7 +23,6 @@
                     .then(svgText => {
                       document.getElementById('couverture-illustration').innerHTML = svgText;
                       Couv = $('#couverture');
-                      console.log(Couv);
                       $('.front').append(Couv.clone());
                     })
                     .catch(error => console.error('Erreur de chargement SVG:', error));                 
@@ -207,7 +206,6 @@
 				Definition.find('.definition-carte').html(carte);
 
 				var deuxiemesCartes = DeuxiemesCartes(JourCourant,MoisCourant);
-				console.log(deuxiemesCartes);
 
 				var texte = '';
 
